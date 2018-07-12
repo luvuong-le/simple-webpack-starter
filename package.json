@@ -1,15 +1,14 @@
 {
   "name": "webpack-starter",
   "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "description": "Simple Webpack Starter",
   "scripts": {
     "test": "mocha ./src/**/*.test.js",
     "test:watch": "nodemon --exec \"npm test\"",
     "webpack": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lu-Vuong Le",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -28,7 +27,5 @@
     "webpack": "^4.12.1",
     "webpack-cli": "^3.0.8"
   },
-  "dependencies": {
-    "lodash": "^4.17.10"
-  }
+  "dependencies": {}
 }
