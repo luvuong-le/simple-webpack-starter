@@ -3,19 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "../css/main.css",
-        }),
-        new BrowserSyncPlugin({
-            host: 'localhost',
-            port: 8000,
-            files: ['./*.html'],
-            server: {
-                baseDir: ["./"]
-            }
-        })
-    ],
     watch: true,
     entry: [
         './src/js/app.js',
@@ -33,10 +20,15 @@ module.exports = {
                 {
                     loader: "css-loader",
                     options: {
-                        minimize: true
+                        minimize: false,
                     }
                 },
-                "sass-loader"
+                {
+                    loader: "postcss-loader",
+                },
+                {
+                    loader: "sass-loader",
+                }
             ]
         },
         {
@@ -50,5 +42,18 @@ module.exports = {
             }
         },
         ]
-    }
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "../css/main.css",
+        }),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 8000,
+            files: ['./*.html'],
+            server: {
+                baseDir: ["./"]
+            }
+        })
+    ]
 };
