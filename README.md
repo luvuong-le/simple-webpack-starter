@@ -4,6 +4,7 @@
 
  * BrowserSync
  * SCSS | MiniCssExtractPlugin
+ * PostCSS | Autoprefixer
  * Babel JS
  * Mocha | Chai
 
