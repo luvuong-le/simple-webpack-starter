@@ -3,6 +3,7 @@ module.exports = {
         autoprefixer: {
             browsers: ['last 10 versions'],
             grid: true
-        }
+        },
+        "cssnano": {}
     }
 };
